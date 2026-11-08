@@ -1,0 +1,55 @@
+name: Capture real portfolio screenshots
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/capture-portfolio.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Capture live mobile pages
+        run: |
+          mkdir -p assets
+          node <<'JS'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({headless: true});
+            for (const [url, filename] of [
+              ['https://splandscapingllc.com/', 'assets/sp-landscaping-mobile.jpg'],
+              ['https://saltonasbookkeeping.com/', 'assets/saltonas-bookkeeping-mobile.jpg']
+            ]) {
+              const page = await browser.newPage({
+                viewport: {width: 390, height: 790},
+                deviceScaleFactor: 1,
+                isMobile: true,
+                hasTouch: true
+              });
+              await page.goto(url, {waitUntil: 'domcontentloaded', timeout: 60000});
+              await page.waitForTimeout(2200);
+              await page.screenshot({path: filename, type:'jpeg', quality:84});
+              console.log('Captured:', filename);
+              await page.close();
+            }
+            await browser.close();
+          })().catch(e => { console.error(e); process.exit(1); });
+          JS
+      - name: Commit screenshots to repository
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add assets/sp-landscaping-mobile.jpg assets/saltonas-bookkeeping-mobile.jpg
+          git diff --cached --quiet || (git commit -m "Add authentic mobile screenshots of portfolio websites" && git push)
