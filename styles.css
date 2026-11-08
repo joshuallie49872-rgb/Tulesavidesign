@@ -23,3 +23,50 @@
 .footer-legal{font-size:12px!important;opacity:.85}
 .legal a:not(.btn){text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.real-project{grid-template-columns:1fr}.real-project-visual{min-height:240px;padding:24px}.real-project .project-content{padding:28px}.case-body{padding:25px}.case-title{font-size:33px}}
+
+
+/* Saltonas Bookkeeping portfolio preview: matches the real site's logo, palette, wording and mobile layout. */
+.sb-preview-link{display:block;color:inherit;max-width:100%;min-width:0}
+.sb-preview-window{background:#fff;border:1px solid #d5dce3;border-radius:15px;overflow:hidden;box-shadow:0 20px 58px rgba(24,52,47,.16);transition:transform .2s ease,box-shadow .2s ease}
+.sb-preview-link:hover .sb-preview-window{transform:translateY(-3px);box-shadow:0 25px 65px rgba(24,52,47,.22)}
+.sb-preview-browser{height:36px;display:flex;align-items:center;gap:14px;background:#f1f4f7;border-bottom:1px solid #dce3e9;padding:0 15px;color:#697e90}
+.sb-preview-dots{display:flex;gap:5px;flex-shrink:0}
+.sb-preview-dots i{width:7px;height:7px;border-radius:50%;background:#bdc9d2}
+.sb-preview-url{font-size:11px;font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sb-preview-secure{margin-left:auto;font-size:15px}
+.sb-preview-page{background:#f7f2ed}
+.sb-preview-nav{height:63px;display:flex;align-items:center;justify-content:space-between;padding:11px 24px;background:#f7f2ed;border-bottom:1px solid #e4e2e2;gap:15px}
+.sb-preview-logo{display:flex;gap:9px;align-items:center;min-width:0}
+.sb-preview-logo img:first-child{width:41px;height:41px;object-fit:contain;flex-shrink:0}
+.sb-preview-logo img:nth-child(2){width:162px;max-height:35px;object-fit:contain;object-position:left center}
+.sb-preview-hamburger{display:grid;place-items:center;width:31px;height:31px;flex-shrink:0;border:1px solid #d5dde4;border-radius:8px;color:#234668;font-size:20px;line-height:1}
+.sb-preview-hero{background:radial-gradient(circle at 86% 27%,#dfeaf4,transparent 47%),linear-gradient(180deg,#f7f2ed,#fff);padding:41px 30px 38px}
+.sb-preview-overline{color:#21466f!important;font:800 10px/1.5 Arial,sans-serif!important;letter-spacing:1.55px;margin:0 0 18px!important}
+.sb-preview-hero h3{color:#173654;font:700 clamp(31px,3.6vw,45px)/1.02 Georgia,serif;letter-spacing:-1.2px;margin:0 0 18px}
+.sb-preview-description{max-width:420px;color:#687785!important;font:400 13px/1.67 Arial,sans-serif!important;margin:0 0 23px!important}
+.sb-preview-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sb-preview-buttons span{display:block;border-radius:8px;text-align:center;font:700 12px/1.3 Arial,sans-serif;padding:13px 6px;color:#fff;background:#21466f;border:1px solid #21466f}
+.sb-preview-buttons span+span{background:transparent;color:#21466f}
+.sb-preview-trust{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:16px 19px 20px;background:#fff;border-top:1px solid #dce4eb}
+.sb-preview-trust span{padding:10px 8px;border:1px solid #dce4eb;border-radius:9px;text-align:center}
+.sb-preview-trust b{display:block;color:#173654;font:700 11px/1.3 Arial,sans-serif}
+.sb-preview-trust small{display:block;margin-top:5px;color:#687785;font:400 10px/1.4 Arial,sans-serif}
+.sb-preview-caption{font-size:12px;color:#60736c;text-align:center;margin:15px 0 0}
+.visual>.sb-preview-link{max-width:540px;margin:auto}
+.real-project-visual{background:linear-gradient(145deg,#e9eef3,#d6e3ed);min-height:390px;padding:27px}
+.real-project-visual .sb-preview-link{width:100%;max-width:420px}
+.sb-preview--compact .sb-preview-nav{height:50px;padding:8px 17px}
+.sb-preview--compact .sb-preview-logo img:first-child{width:31px;height:31px}
+.sb-preview--compact .sb-preview-logo img:nth-child(2){width:133px}
+.sb-preview--compact .sb-preview-hamburger{width:27px;height:27px;font-size:16px}
+.sb-preview--compact .sb-preview-hero{padding:29px 23px 24px}
+.sb-preview--compact .sb-preview-hero h3{font-size:32px;margin-bottom:13px}
+.sb-preview--compact .sb-preview-description{font-size:11px!important;margin-bottom:18px!important}
+.sb-preview--compact .sb-preview-overline{font-size:8px!important;margin-bottom:12px!important;letter-spacing:1px}
+.sb-preview--compact .sb-preview-buttons span{padding:10px 5px;font-size:10px}
+.sb-preview--compact .sb-preview-trust{padding:12px;gap:6px}
+.sb-preview--compact .sb-preview-trust span{padding:7px 5px}
+.sb-preview--compact .sb-preview-trust b{font-size:9px}
+.sb-preview--compact .sb-preview-trust small{font-size:8px}
+@media(max-width:760px){.visual{padding:19px 0 0}.hero .visual{width:100%}.real-project-visual{padding:25px;min-height:0}.sb-preview-hero{padding:32px 23px}.sb-preview-hero h3{font-size:39px}.sb-preview-description{font-size:13px!important}.sb-preview-logo img:nth-child(2){width:155px}.sb-preview-caption{margin-bottom:0}.sb-preview--compact .sb-preview-hero h3{font-size:35px}}
+@media(max-width:380px){.sb-preview-nav{padding:8px 12px}.sb-preview-logo img:nth-child(2){width:131px}.sb-preview-hero h3{font-size:34px}.sb-preview-trust{padding:12px 10px}}
