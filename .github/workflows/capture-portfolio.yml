@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   screenshots:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,7 +33,7 @@ jobs:
               ['https://saltonasbookkeeping.com/', 'assets/saltonas-bookkeeping-mobile.jpg']
             ]) {
               const page = await browser.newPage({
-                viewport: {width: 390, height: 790},
+                viewport: {width: 390, height: 980},
                 deviceScaleFactor: 1,
                 isMobile: true,
                 hasTouch: true
