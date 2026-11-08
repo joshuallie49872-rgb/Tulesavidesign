@@ -100,3 +100,29 @@
 .landscaping-case .btn{margin-top:4px}
 @media(max-width:760px){.sp-project-visual{min-height:0;padding:25px}.sp-site-hero{min-height:230px}.landscaping-case{grid-template-columns:1fr;gap:26px}.landscaping-case-image img{aspect-ratio:16/10}.landscaping-case h2{font-size:32px}}
 @media(max-width:390px){.sp-site-hero{padding:18px;min-height:218px}.sp-site-overlay{padding:16px 14px}.sp-site-overlay strong{font-size:19px}.sp-site-services{gap:4px}.sp-site-services span{font-size:9px}}
+
+/* Portfolio: genuine screenshots of published sites, not illustrated reconstructions. */
+.portfolio-hero-image{padding:0;width:100%;max-width:455px;margin-inline:auto}
+.portfolio-hero-link{display:block;position:relative;border-radius:21px;overflow:hidden;background:#e7eee7;border:8px solid white;box-shadow:0 24px 58px rgba(16,43,32,.15);transition:transform .18s ease}
+.portfolio-hero-link:hover{transform:translateY(-3px)}
+.portfolio-hero-link img{display:block;width:100%;height:440px;object-fit:cover;object-position:top center}
+.portfolio-image-note{position:absolute;bottom:14px;left:14px;padding:9px 14px;border-radius:99px;background:rgba(255,255,255,.96);color:#18342f;font-size:11px;font-weight:850;letter-spacing:.08em;box-shadow:0 7px 22px rgba(0,0,0,.12)}
+.portfolio-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.portfolio-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 35px rgba(18,48,36,.055);display:flex;flex-direction:column}
+.portfolio-card-image{display:block;background:#e9eee8;padding:20px 24px 0;overflow:hidden}
+.portfolio-card-image img{display:block;margin:0 auto;width:100%;max-width:350px;height:350px;object-fit:cover;object-position:top center;border-radius:12px 12px 0 0;box-shadow:0 6px 20px rgba(0,0,0,.12);transition:transform .2s ease}
+.portfolio-card-image:hover img{transform:translateY(-3px)}
+.portfolio-card-body{padding:25px 27px 28px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.portfolio-tag{font-size:11px;letter-spacing:.11em;font-weight:850;color:var(--clay);margin-bottom:10px}
+.portfolio-card-body h3{color:var(--ink);font-size:23px;line-height:1.2;margin:0 0 10px}
+.portfolio-card-body p{font-size:15px;color:var(--muted);margin:0 0 21px;max-width:440px}
+.portfolio-visit{margin-top:auto;font-size:14px;font-weight:800;color:var(--ink);text-decoration:underline;text-decoration-color:var(--clay);text-underline-offset:5px}
+@media(max-width:760px){
+.portfolio-hero-image{max-width:430px}
+.portfolio-hero-link img{height:310px}
+.portfolio-cards{grid-template-columns:1fr;gap:22px}
+.portfolio-card-image{padding:16px 18px 0}
+.portfolio-card-image img{height:340px}
+.portfolio-card-body{padding:22px 23px 25px}
+}
+@media(max-width:390px){.portfolio-hero-link img{height:275px}.portfolio-card-image img{height:300px}}
