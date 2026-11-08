@@ -70,3 +70,33 @@
 .sb-preview--compact .sb-preview-trust small{font-size:8px}
 @media(max-width:760px){.visual{padding:19px 0 0}.hero .visual{width:100%}.real-project-visual{padding:25px;min-height:0}.sb-preview-hero{padding:32px 23px}.sb-preview-hero h3{font-size:39px}.sb-preview-description{font-size:13px!important}.sb-preview-logo img:nth-child(2){width:155px}.sb-preview-caption{margin-bottom:0}.sb-preview--compact .sb-preview-hero h3{font-size:35px}}
 @media(max-width:380px){.sb-preview-nav{padding:8px 12px}.sb-preview-logo img:nth-child(2){width:131px}.sb-preview-hero h3{font-size:34px}.sb-preview-trust{padding:12px 10px}}
+
+
+/* Verified client case study: preview uses the actual SP Landscaping logo, hero photograph, and website language. */
+.portfolio-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+.sp-project-visual{background:linear-gradient(145deg,#e6ebdf,#dbe4d8);padding:27px;min-height:370px}
+.sp-preview-link{display:block;width:100%;max-width:460px;min-width:0;color:inherit}
+.sp-site-preview{border:1px solid #c8d4ca;border-radius:14px;overflow:hidden;background:white;box-shadow:0 20px 58px rgba(24,52,47,.17);transition:transform .18s ease,box-shadow .18s ease}
+.sp-preview-link:hover .sp-site-preview{transform:translateY(-3px);box-shadow:0 25px 65px rgba(24,52,47,.23)}
+.sp-site-browser{height:35px;display:flex;align-items:center;gap:12px;padding:0 14px;background:#f2f4f0;color:#718076;font-size:11px;font-weight:650;border-bottom:1px solid #dde4de}
+.sp-site-browser>span:nth-child(2){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sp-browser-dots{display:flex;gap:5px;flex-shrink:0}
+.sp-browser-dots i{width:7px;height:7px;background:#c7d0c6;border-radius:50%}
+.sp-browser-arrow{margin-left:auto;font-size:16px}
+.sp-site-header{height:68px;padding:6px 19px;background:#fff;display:flex;align-items:center;justify-content:space-between}
+.sp-site-header img{width:auto;max-width:172px;max-height:52px;object-fit:contain;object-position:left}
+.sp-site-menu{font-size:19px;color:#3b423c;border:1px solid #dfe4df;border-radius:8px;padding:1px 9px}
+.sp-site-hero{min-height:225px;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.05)),url('https://splandscapingllc.com/images/washougal-wa-circular-paver-fire-pit-patio-02.jpg') center 65%/cover no-repeat;display:grid;place-items:center;padding:26px}
+.sp-site-overlay{background:rgba(0,0,0,.5);border-radius:12px;color:#fff;padding:19px 22px;text-align:center;max-width:330px}
+.sp-site-overlay strong{display:block;font:700 21px/1.14 Arial,sans-serif;color:#fff}
+.sp-site-overlay small{display:block;font:400 11px/1.4 Arial,sans-serif;color:#fff;margin:8px 0 14px}
+.sp-site-overlay>span{background:#2e7d32;color:#fff;display:inline-block;border-radius:8px;padding:9px 15px;font:700 10px/1.2 Arial,sans-serif}
+.sp-site-services{background:#f6f6f4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:13px 12px}
+.sp-site-services span{display:block;padding:9px 4px;background:#fff;border:1px solid #e3e9e0;border-radius:7px;text-align:center;color:#2e6134;font:700 10px/1.2 Arial,sans-serif}
+.landscaping-case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:50px}
+.landscaping-case-image{display:block;border:9px solid white;border-radius:21px;overflow:hidden;box-shadow:var(--shadow)}
+.landscaping-case-image img{aspect-ratio:5/4;object-fit:cover;width:100%;display:block}
+.landscaping-case p:not(.eyebrow){color:var(--muted);font-size:17px}
+.landscaping-case .btn{margin-top:4px}
+@media(max-width:760px){.sp-project-visual{min-height:0;padding:25px}.sp-site-hero{min-height:230px}.landscaping-case{grid-template-columns:1fr;gap:26px}.landscaping-case-image img{aspect-ratio:16/10}.landscaping-case h2{font-size:32px}}
+@media(max-width:390px){.sp-site-hero{padding:18px;min-height:218px}.sp-site-overlay{padding:16px 14px}.sp-site-overlay strong{font-size:19px}.sp-site-services{gap:4px}.sp-site-services span{font-size:9px}}
